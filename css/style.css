@@ -1,0 +1,44 @@
+@import url("./fonts.css");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* ---------- Global Variables START ---------- */
+:root {
+  /* Fonts START */
+  --font-caption-BalsamiqSans: "Balsamiq Sans", cursive;
+  --font-navLink-OdibeeSans: "Odibee Sans", cursive;
+  --font-text-Sansita: "Sansita", sans-serif;
+  --font-heading-SpeedballMetro: "Speedball Metropolitan Poster", sans-serif;
+  /* Fonts END */
+
+  /* Color Theme START */
+  --color-black: rgba(15, 15, 15, 1);
+  --color-white: rgba(255, 255, 255, 1);
+  --color-golden: rgba(255, 215, 0, 1);
+  --color-reddish: rgba(186, 31, 31, 1);
+  /* Color Theme END */
+
+  /* width,height,padding and Margin START */
+  --page-padding-lg-screen: 0 2rem;
+  --page-padding-sm-screen: 0 1rem;
+  --navbar-height: 9vh;
+  --navbar-link-height-sm: 6.7vh;
+  /* width,height,padding and Margin END */
+}
+/* ---------- Global Variables END ---------- */
+
+/* ---------- Global Styles START ---------- */
+a {
+  text-decoration: none;
+}
+/* ---------- Global Styles END ---------- */
+
+/* ---------- Header Style START ---------- */
+/* ---------- Header Style END ---------- */
+
+/* ---------- START ---------- */
+/* ---------- END ---------- */
