@@ -156,7 +156,7 @@ ul.nav-menu > li.nav-item > .nav-btn-label:hover > span {
 }
 
 .nav-btn:checked ~ .mega-dropdown {
-  display: flex;
+  display: flex !important;
 }
 
 .mega-dropdown {
