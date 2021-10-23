@@ -517,15 +517,5 @@ ul.nav-menu > li.nav-item > .nav-btn-label:hover > span {
 }
 /* ----- Media => (max-width: 768px) END ----- */
 
-/* ----- Media => (max-width: 600px) START ----- */
-/* 
-@media only screen and (max-width: 700px) {
-  .nav-btn-label span {
-    left: 80%;
-  }
-} */
-
-/* ----- Media => (max-width: 600px) END ----- */
-
 /* ---------- START ---------- */
 /* ---------- END ---------- */
