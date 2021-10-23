@@ -109,14 +109,18 @@ ul#primaryMenu > li.nav-item > a.nav-link,
   cursor: pointer;
 }
 
+.nav-btn-label {
+  position: relative;
+}
+
 .nav-btn-label span {
   display: inline-block;
   width: 11px;
   height: 11px;
   background: transparent;
-  position: relative;
-  top: -3px;
-  left: 5px;
+  position: absolute;
+  top: 3vh;
+  right: 12px;
   border-right: 3px solid rgba(255, 255, 255, 1);
   border-right: 3px solid var(--color-white, rgba(255, 255, 255, 1));
   border-bottom: 3px solid rgba(255, 255, 255, 1);
@@ -140,7 +144,7 @@ ul.nav-menu > li.nav-item > .nav-btn-label:hover > span {
 }
 
 .nav-btn:checked + .nav-btn-label > span {
-  top: 2px;
+  top: 4vh;
   transform: rotate(-135deg);
   border-right: 3px solid rgba(255, 215, 0, 1);
   border-right: 3px solid var(--color-golden, rgba(255, 215, 0, 1));
@@ -250,12 +254,20 @@ ul.nav-menu > li.nav-item > .nav-btn-label:hover > span {
   .mega-dropdown > ul.nav-menu {
     margin-bottom: 1.5rem;
   }
+
+  .nav-btn-label span {
+    right: 6px;
+  }
+
+  .nav-btn:checked + .nav-btn-label > span {
+    top: 3.8vh;
+  }
 }
 
 @media only screen and (max-width: 910px) {
   ul#primaryMenu > li.nav-item > a.nav-link,
   .nav-btn-label {
-    padding: 0 1rem;
+    padding: 0 1.2rem;
   }
 
   ul#primaryMenu > li.nav-item > a.nav-link,
@@ -266,7 +278,7 @@ ul.nav-menu > li.nav-item > .nav-btn-label:hover > span {
   .nav-btn-label span {
     width: 10px;
     height: 10px;
-    left: 4px;
+    right: 3px;
     border-right: 2.5px solid rgba(255, 255, 255, 1);
     border-right: 2.5px solid var(--color-white, rgba(255, 255, 255, 1));
     border-bottom: 2.5px solid rgba(255, 255, 255, 1);
@@ -386,15 +398,16 @@ ul.nav-menu > li.nav-item > .nav-btn-label:hover > span {
     margin-bottom: 1rem;
   }
 
-  .mega-dropdown > ul.nav-menu > li.nav-item {
-    max-height: 0;
-    height: 0;
+  .mega-dropdown > ul.nav-menu > li.nav-item,
+  .mega-dropdown > div {
     flex: 100%;
     max-width: 100%;
-    -webkit-animation: mega-item-anim 350ms linear both;
-    -moz-animation: mega-item-animn 350ms linear both;
-    -o-animation: mega-item-anim 350ms linear both;
-    animation: mega-item-anim 350ms linear both;
+    max-height: 0;
+    height: 0;
+    -webkit-animation: mega-item-anim 350ms linear 50ms both;
+    -moz-animation: mega-item-animn 350ms linear 50ms both;
+    -o-animation: mega-item-anim 350ms linear 50ms both;
+    animation: mega-item-anim 350ms linear 50ms both;
   }
 
   @-webkit-keyframes mega-item-anim {
@@ -446,8 +459,73 @@ ul.nav-menu > li.nav-item > .nav-btn-label:hover > span {
     color: rgba(255, 255, 255, 1);
     color: var(--color-white, rgba(255, 255, 255, 1));
   }
+
+  .mega-dropdown > div > a.full-menu-link {
+    color: rgba(255, 215, 0, 1);
+    color: var(--color-golden, rgba(255, 215, 0, 1));
+  }
+
+  .mega-dropdown > div > a.full-menu-link > span {
+    border-right: 2px solid rgba(255, 215, 0, 1);
+    border-right: 2px solid var(--color-golden, rgba(255, 215, 0, 1));
+    border-bottom: 2px solid rgba(255, 215, 0, 1);
+    border-bottom: 2px solid var(--color-golden, rgba(255, 215, 0, 1));
+  }
+
+  .nav-btn-label span {
+    width: 1.3rem;
+    height: 0.25rem;
+    background: rgba(255, 255, 255, 1);
+    background: var(--color-white, rgba(255, 255, 255, 1));
+    top: 4vh;
+    right: 1.7rem;
+    border: none;
+    transform: rotate(0);
+  }
+
+  .nav-btn-label span::before {
+    content: "";
+    position: absolute;
+    width: 1.3rem;
+    height: 0.25rem;
+    background: rgba(255, 255, 255, 1);
+    background: var(--color-white, rgba(255, 255, 255, 1));
+    transform: rotate(90deg);
+  }
+
+  ul.nav-menu > li.nav-item > .nav-btn-label:hover > span {
+    top: 4vh;
+    background: rgba(255, 215, 0, 1);
+    background: var(--color-golden, rgba(255, 215, 0, 1));
+    transform: rotate(0);
+    border: none;
+  }
+
+  ul.nav-menu > li.nav-item > .nav-btn-label:hover > span::before {
+    background: rgba(255, 215, 0, 1);
+    background: var(--color-golden, rgba(255, 215, 0, 1));
+  }
+
+  .nav-btn:checked + .nav-btn-label > span {
+    transform: rotate(0);
+    border: none;
+  }
+
+  .nav-btn:checked + .nav-btn-label > span::before {
+    display: none;
+  }
 }
 /* ----- Media => (max-width: 768px) END ----- */
+
+/* ----- Media => (max-width: 600px) START ----- */
+/* 
+@media only screen and (max-width: 700px) {
+  .nav-btn-label span {
+    left: 80%;
+  }
+} */
+
+/* ----- Media => (max-width: 600px) END ----- */
 
 /* ---------- START ---------- */
 /* ---------- END ---------- */
